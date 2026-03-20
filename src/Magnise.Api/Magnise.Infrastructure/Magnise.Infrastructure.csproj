@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Magnise.Domain\Magnise.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
