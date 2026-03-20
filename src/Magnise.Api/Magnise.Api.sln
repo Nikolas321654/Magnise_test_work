@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnise.Api", "Magnise.Api\Magnise.Api.csproj", "{C763BE33-CC86-4B9D-86BD-953EEA9109E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnise.Domain", "Magnise.Domain\Magnise.Domain.csproj", "{184630A0-1133-4098-9F61-E00196F923C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnise.Application", "Magnise.Application\Magnise.Application.csproj", "{FF3D8FAA-F0A3-491D-8410-A2DE096EF966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnise.Infrastructure", "Magnise.Infrastructure\Magnise.Infrastructure.csproj", "{9F413CD1-314A-43CF-A2A1-7DC21BADEC7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C763BE33-CC86-4B9D-86BD-953EEA9109E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C763BE33-CC86-4B9D-86BD-953EEA9109E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C763BE33-CC86-4B9D-86BD-953EEA9109E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C763BE33-CC86-4B9D-86BD-953EEA9109E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184630A0-1133-4098-9F61-E00196F923C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184630A0-1133-4098-9F61-E00196F923C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184630A0-1133-4098-9F61-E00196F923C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184630A0-1133-4098-9F61-E00196F923C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3D8FAA-F0A3-491D-8410-A2DE096EF966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3D8FAA-F0A3-491D-8410-A2DE096EF966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3D8FAA-F0A3-491D-8410-A2DE096EF966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3D8FAA-F0A3-491D-8410-A2DE096EF966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F413CD1-314A-43CF-A2A1-7DC21BADEC7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F413CD1-314A-43CF-A2A1-7DC21BADEC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F413CD1-314A-43CF-A2A1-7DC21BADEC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F413CD1-314A-43CF-A2A1-7DC21BADEC7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
