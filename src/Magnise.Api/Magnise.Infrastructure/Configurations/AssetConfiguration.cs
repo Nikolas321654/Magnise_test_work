@@ -11,7 +11,13 @@ public class AssetConfiguration : IEntityTypeConfiguration<AssetEntity>
     {
         builder.ToTable("Assets");
         builder.HasKey(x => x.Id);
+
+        builder.Property(x => x.Id).ValueGeneratedNever();
         builder.Property(x => x.Symbol).IsRequired();
         builder.HasIndex(x => x.Symbol).IsUnique();
+        
+        builder.HasOne(x => x.AssetPrice)
+            .WithOne(x => x.Asset)
+            .HasForeignKey<AssetPriceEntity>(x => x.AssetId);
     }
 }

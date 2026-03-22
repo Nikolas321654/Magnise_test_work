@@ -10,13 +10,10 @@ public class AssetPriceConfiguration : IEntityTypeConfiguration<AssetPriceEntity
     {
         builder.ToTable("AssetPrices");
         builder.HasKey(x => x.AssetId);
+        builder.Property(x => x.AssetId).ValueGeneratedNever();
+
         builder.Property(x => x.Date).IsRequired();
         builder.Property(x => x.Price).IsRequired();
         builder.HasIndex(x => x.AssetId);
-
-        builder.HasOne(x => x.Asset)
-            .WithOne()
-            .HasForeignKey<AssetPriceEntity>(x => x.AssetId)
-            .OnDelete(DeleteBehavior.Cascade);
     }
 }

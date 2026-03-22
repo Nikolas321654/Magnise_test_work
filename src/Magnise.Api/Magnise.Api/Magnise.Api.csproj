@@ -18,13 +18,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="DTO\Request\" />
-      <Folder Include="DTO\Responce\" />
       <Folder Include="Mapper\" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Magnise.Application\Magnise.Application.csproj" />
       <ProjectReference Include="..\Magnise.Infrastructure\Magnise.Infrastructure.csproj" />
     </ItemGroup>
 

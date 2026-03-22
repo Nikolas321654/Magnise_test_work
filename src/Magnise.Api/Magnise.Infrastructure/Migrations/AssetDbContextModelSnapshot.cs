@@ -24,20 +24,14 @@ namespace Magnise.Infrastructure.Migrations
 
             modelBuilder.Entity("Magnise.Domain.Entities.AssetEntity", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AssetPriceAssetId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<string>("Symbol")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AssetPriceAssetId");
 
                     b.HasIndex("Symbol")
                         .IsUnique();
@@ -47,8 +41,8 @@ namespace Magnise.Infrastructure.Migrations
 
             modelBuilder.Entity("Magnise.Domain.Entities.AssetPriceEntity", b =>
                 {
-                    b.Property<Guid>("AssetId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("AssetId")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone");
@@ -63,26 +57,21 @@ namespace Magnise.Infrastructure.Migrations
                     b.ToTable("AssetPrices", (string)null);
                 });
 
-            modelBuilder.Entity("Magnise.Domain.Entities.AssetEntity", b =>
-                {
-                    b.HasOne("Magnise.Domain.Entities.AssetPriceEntity", "AssetPrice")
-                        .WithMany()
-                        .HasForeignKey("AssetPriceAssetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AssetPrice");
-                });
-
             modelBuilder.Entity("Magnise.Domain.Entities.AssetPriceEntity", b =>
                 {
                     b.HasOne("Magnise.Domain.Entities.AssetEntity", "Asset")
-                        .WithOne()
+                        .WithOne("AssetPrice")
                         .HasForeignKey("Magnise.Domain.Entities.AssetPriceEntity", "AssetId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("Magnise.Domain.Entities.AssetEntity", b =>
+                {
+                    b.Navigation("AssetPrice")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
